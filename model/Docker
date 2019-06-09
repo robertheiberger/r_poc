@@ -10,7 +10,7 @@ RUN apt-get -y update && apt-get install -y --no-install-recommends \
 
 RUN R -e "install.packages(c('mda', 'plumber'), repos='https://cloud.r-project.org')"
 
-COPY mars.R /opt/ml/mars.R
+COPY mars.R /opt/ml/model.R
 COPY plumber.R /opt/ml/plumber.R
 
-ENTRYPOINT ["/usr/bin/Rscript", "/opt/ml/mars.R", "--no-save"]
+ENTRYPOINT ["/usr/bin/Rscript", "/opt/ml/model.R", "--no-save"]
