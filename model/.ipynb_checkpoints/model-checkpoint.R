@@ -9,11 +9,8 @@ library(caret)
 library(glmnet)
 library(ggrepel)
 library(dummies)
-#library(reticulate)
+library(plumber)
 
-#sagemaker <- import('sagemaker')
-#session <- sagemaker$Session()
-#bucket <- session$default_bucket()
 
 prefix <- '/opt/ml'
 input_path <- paste(prefix, 'input/data', sep='/')
